@@ -1,1 +1,20 @@
+# Fichier d'exemple .env
+# Remplace les valeurs et crée un fichier .env local avant de démarrer
 
+# Préfix pour les commandes, ex: !help
+PREFIX=!
+
+# Chemin du fichier de session (auth) — ne pas versionner
+SESSION_FILE=./auth_info_multi.json
+
+# Code parrain initial (8 chiffres) - optionnel (ne pas mettre sur un repo public)
+PARAINE_CODE=
+
+# Numéro par défaut pour les envois (format sans suffixe @s.whatsapp.net), ex: 33612345678
+DEFAULT_TARGET_NUMBER=
+
+# Identifiant propriétaire (JID) pour commandes ownerOnly, ex: 33xxxxxxxxx@s.whatsapp.net
+OWNER_ID=
+
+# Mode debug
+LOG_LEVEL=info
