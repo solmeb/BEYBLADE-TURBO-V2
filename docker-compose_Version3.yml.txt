@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    container_name: beyblade-wa-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PREFIX=${PREFIX:-!}
+      - SESSION_FILE=/app/auth/auth_info_multi.json
+      - PARAINE_CODE=${PARAINE_CODE:-}
+      - DEFAULT_TARGET_NUMBER=${DEFAULT_TARGET_NUMBER:-}
+      - OWNER_ID=${OWNER_ID:-}
+    volumes:
+      - ./auth:/app/auth
+      - ./data:/app/data
+      - ./logs:/app/logs

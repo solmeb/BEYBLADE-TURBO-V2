@@ -1,0 +1,14 @@
+FROM node:18-alpine
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --production
+
+COPY . .
+
+# Create a folder to store auth + data, must be writable
+VOLUME ["/app/auth", "/app/data"]
+
+ENV NODE_ENV=production
+
+CMD ["node", "index.js"]
